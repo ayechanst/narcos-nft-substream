@@ -1,11 +1,15 @@
 specVersion: v0.1.0
 package:
-  name: "substreams_template"
+  name: narcos_substreams
   version: v0.1.0
+
+imports:
+  sql: https://github.com/streamingfast/substreams-sink-sql/releases/download/protodefs-v1.0.2/substreams-sink-sql-protodefs-v1.0.2.spkg
+  database_change: https://github.com/streamingfast/substreams-sink-database-changes/releases/download/v1.2.1/substreams-database-change-v1.2.1.spkg
 
 protobuf:
   files:
-    - erc721.proto
+    - contract.proto
   importPaths:
     - ./proto
 
@@ -15,18 +19,31 @@ binaries:
     file: ./target/wasm32-unknown-unknown/release/substreams.wasm
 
 modules:
-  - name: map_transfers
+  - name: map_events
     kind: map
-    initialBlock: 12287507
+    initialBlock: 13403143
     inputs:
       - source: sf.ethereum.type.v2.Block
     output:
-      type: proto:eth.erc721.v1.Transfers
+      type: proto:contract.v1.Events
 
-  - name: store_transfers
-    kind: store
-    initialBlock: 12287507
-    updatePolicy: add
-    valueType: int64
+  - name: db_out
+    kind: map
+    initialBlock: 13403143
     inputs:
-      - map: map_transfers
+      - map: map_events
+    output:
+      type: proto:sf.substreams.sink.database.v1.DatabaseChanges
+
+network: mainnet
+
+sink:
+  module: db_out
+  type: sf.substreams.sink.sql.v1.Service
+  config:
+    schema: "./schema.sql"
+    wire_protocol_access: true
+    postgraphile_frontend:
+      enabled: true
+    pgweb_frontend:
+      enabled: true
