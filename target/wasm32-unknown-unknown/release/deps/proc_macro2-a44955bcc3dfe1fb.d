@@ -1,0 +1,11 @@
+/home/chadbro/substreams/narcos-nft-substream/target/wasm32-unknown-unknown/release/deps/proc_macro2-a44955bcc3dfe1fb.rmeta: /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/lib.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/marker.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/parse.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/rcvec.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/fallback.rs
+
+/home/chadbro/substreams/narcos-nft-substream/target/wasm32-unknown-unknown/release/deps/libproc_macro2-a44955bcc3dfe1fb.rlib: /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/lib.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/marker.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/parse.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/rcvec.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/fallback.rs
+
+/home/chadbro/substreams/narcos-nft-substream/target/wasm32-unknown-unknown/release/deps/proc_macro2-a44955bcc3dfe1fb.d: /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/lib.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/marker.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/parse.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/rcvec.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/fallback.rs
+
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/lib.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/marker.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/parse.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/rcvec.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-1.0.47/src/fallback.rs:

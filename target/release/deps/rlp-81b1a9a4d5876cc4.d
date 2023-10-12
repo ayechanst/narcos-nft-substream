@@ -1,0 +1,12 @@
+/home/chadbro/substreams/narcos-nft-substream/target/release/deps/rlp-81b1a9a4d5876cc4.rmeta: /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/lib.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/error.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/impls.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/rlpin.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/stream.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/traits.rs
+
+/home/chadbro/substreams/narcos-nft-substream/target/release/deps/librlp-81b1a9a4d5876cc4.rlib: /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/lib.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/error.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/impls.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/rlpin.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/stream.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/traits.rs
+
+/home/chadbro/substreams/narcos-nft-substream/target/release/deps/rlp-81b1a9a4d5876cc4.d: /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/lib.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/error.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/impls.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/rlpin.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/stream.rs /home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/traits.rs
+
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/lib.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/error.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/impls.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/rlpin.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/stream.rs:
+/home/chadbro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rlp-0.5.2/src/traits.rs:

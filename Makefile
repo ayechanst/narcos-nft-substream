@@ -1,5 +1,7 @@
 ENDPOINT ?= mainnet.eth.streamingfast.io:443
 CARGO_VERSION := $(shell cargo version 2>/dev/null)
+START_BLOCK ?= 17652211
+STOP_BLOCK ?= +10000
 
 .PHONY: build
 build:
@@ -12,7 +14,7 @@ endif
 
 .PHONY: run
 run: build
-	substreams run -e $(ENDPOINT) substreams.yaml map_events $(if $(START_BLOCK),-s $(START_BLOCK)) $(if $(STOP_BLOCK),-t $(STOP_BLOCK))
+	substreams run -e $(ENDPOINT) substreams.yaml db_out $(if $(START_BLOCK),-s $(START_BLOCK)) $(if $(STOP_BLOCK),-t $(STOP_BLOCK))
 
 .PHONY: gui
 gui: build
