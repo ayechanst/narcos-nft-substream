@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/chadbro/substreams/narcos-nft-substream/target/release/build/typenum-488676e7f591fded/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/chadbro/substreams/narcos-nft-substream/target/release/build/typenum-488676e7f591fded/out/op.rs
