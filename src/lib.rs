@@ -19,10 +19,12 @@ const START_BLOCK: u64 = 17652211;
 #[substreams::handlers::map]
 fn map_transfers(block: eth::v2::Block) -> Result<Transfers, substreams::errors::Error> {
     let transfers = block
+        // the output of this function is stored in the variable transfers
         .logs()
         .filter_map(|log| {
             if format_hex(log.address()) == ADDRESS.to_lowercase() {
                 if let Some(transfer) = TransferEvent::match_and_decode(log) {
+                    // if the if let is true, this block gets executed
                     Some((transfer, format_hex(&log.receipt.transaction.hash)))
                 } else {
                     None

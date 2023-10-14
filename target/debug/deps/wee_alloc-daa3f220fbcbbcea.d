@@ -1,0 +1,11 @@
+/home/chadbro/substreams/narcos-nft-substream/target/debug/deps/wee_alloc-daa3f220fbcbbcea.rmeta: /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/lib.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/extra_assert.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/const_init.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/neighbors.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/size_classes.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/imp_unix.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/size_classes_init.rs
+
+/home/chadbro/substreams/narcos-nft-substream/target/debug/deps/wee_alloc-daa3f220fbcbbcea.d: /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/lib.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/extra_assert.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/const_init.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/neighbors.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/size_classes.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/imp_unix.rs /home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/size_classes_init.rs
+
+/home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/lib.rs:
+/home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/extra_assert.rs:
+/home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/const_init.rs:
+/home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/neighbors.rs:
+/home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/size_classes.rs:
+/home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/imp_unix.rs:
+/home/chadbro/.cargo/registry/src/github.com-1ecc6299db9ec823/wee_alloc-0.4.5/src/size_classes_init.rs:
