@@ -27,6 +27,14 @@ modules:
     output:
       type: proto:schema.Transfers
 
+  - name: map_mints
+    kind: map
+    initialBlock: 17652211
+    inputs:
+      - source: sf.ethereum.type.v2.Block
+    output:
+      type: proto:schema.Mints
+
   - name: map_approvals
     kind: map
     initialBlock: 12287507

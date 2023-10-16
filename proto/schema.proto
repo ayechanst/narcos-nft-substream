@@ -22,6 +22,10 @@ message Transfer {
   string tx_hash = 4;
 }
 
+message Mints {
+  repeated Mint mints = 1;
+}
+
 message Mint {
   string from = 1;
   string to = 2;

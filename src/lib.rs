@@ -4,7 +4,7 @@ mod erc721;
 mod helpers;
 mod pb;
 
-use pb::schema::{Approval, Approvals, Transfer, Transfers};
+use pb::schema::{Approval, Approvals, Transfer, Transfers, Mint, Mints};
 use substreams::pb::substreams::Clock;
 use substreams_entity_change::{pb::entity::EntityChanges, tables::Tables};
 use substreams_ethereum::{pb::eth, Event};
@@ -49,6 +49,37 @@ fn map_transfers(block: eth::v2::Block) -> Result<Transfers, substreams::errors:
 
     Ok(Transfers { transfers })
 }
+
+#[substreams::handlers::map]
+fn map_mints(block: eth::v2::Block) -> Result<Mints, substreams::errors::Error> {
+    let mints = block
+        .logs()
+        .filter_map(|log| {
+            if format_hex(log.address()) == ADDRESS.to_lowercase() {
+                if let Some(transfer) = TransferEvent::match_and_decode(log) {
+                    Some((transfer, format_hex(&log.receipt.transaction.hash)))
+                } else {
+                    None
+                }
+            } else {
+                None
+            }
+        })
+        .filter_map(|(transfer, _hash)| {
+            if format_hex(&transfer.from) == "0x0000000000000000000000000000000000000000".to_string() {
+                Some(Mint {
+                    from: format_hex(&transfer.from),
+                    to: format_hex(&transfer.to),
+                    token_id: transfer.token_id.to_string(),
+                })
+            } else {
+                None
+            }
+        })
+        .collect::<Vec<Mint>>();
+    Ok(Mints { mints })
+}
+
 
 #[substreams::handlers::map]
 fn map_approvals(block: eth::v2::Block) -> Result<Approvals, substreams::errors::Error> {
