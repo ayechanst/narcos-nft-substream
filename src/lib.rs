@@ -13,7 +13,7 @@ use helpers::*;
 
 use erc721::events::{Approval as ApprovalEvent, Transfer as TransferEvent};
 
-pub const ADDRESS: &str = "0xF419CdbaCdE81a94378c8168059a7526d7779F98";
+pub const ADDRESS: &str = "0x859f37d09d6EEBFB9A8AaFCa04212DA14516b534";
 const START_BLOCK: u64 = 17652211;
 
 #[substreams::handlers::map]
