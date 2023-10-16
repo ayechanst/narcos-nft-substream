@@ -110,8 +110,9 @@ fn map_approvals(block: eth::v2::Block) -> Result<Approvals, substreams::errors:
 #[substreams::handlers::map]
 pub fn graph_out(
     clock: Clock,
-    transfers: Transfers,
-    approvals: Approvals,
+    // transfers: Transfers,
+    // approvals: Approvals,
+    mints: Mints,
 ) -> Result<EntityChanges, substreams::errors::Error> {
     let mut tables = Tables::new();
 
@@ -119,10 +120,9 @@ pub fn graph_out(
         // Create the collection, we only need to do this once
         tables.create_row("Collection", ADDRESS.to_string());
     }
-
     transfers_to_table_changes(&mut tables, &transfers);
-
     approvals_to_table_changes(&mut tables, &approvals);
+
 
     Ok(tables.to_entity_changes())
 }

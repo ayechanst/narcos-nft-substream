@@ -1,5 +1,5 @@
 use crate::{
-    pb::schema::{Approvals, Transfers},
+    pb::schema::{Approvals, Transfers, Mints},
     ADDRESS,
 };
 use substreams::Hex;
@@ -23,6 +23,17 @@ pub fn transfers_to_table_changes(tables: &mut Tables, transfers: &Transfers) {
             .update_row("Token", format!("{}", &transfer.token_id))
             .set("collection", ADDRESS.to_string())
             .set("owner", &transfer.to);
+    }
+}
+
+pub fn mints_to_table_changes(tables: &mut Tables, mints: &Mints) {
+    for mint in mints.mints.iter() {
+        //handle the mint
+        let key = format!("{}-{}", &mint.tx_hash, mint.token_id);
+        let row = tables.update_row("Mint", key);
+        row.set("from", &mint.from);
+        row.set("to", &mint.to);
+        row.set("tokenId", &mint.token_id);
     }
 }
 
