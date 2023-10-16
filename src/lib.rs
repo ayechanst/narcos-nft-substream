@@ -13,7 +13,7 @@ use helpers::*;
 
 use erc721::events::{Approval as ApprovalEvent, Transfer as TransferEvent};
 
-pub const ADDRESS: &str = "0x859f37d09d6EEBFB9A8AaFCa04212DA14516b534";
+pub const ADDRESS: &str = "0xF419CdbaCdE81a94378c8168059a7526d7779F98";
 const START_BLOCK: u64 = 17652211;
 
 #[substreams::handlers::map]
@@ -33,11 +33,17 @@ fn map_transfers(block: eth::v2::Block) -> Result<Transfers, substreams::errors:
                 None
             }
         })
-        .map(|(transfer, hash)| Transfer {
+        .filter_map(|(transfer, hash)| {
+           if format_hex(&transfer.from) == "00000000000000000000000000000000000000000000000000000000000000000".to_string() {
+            Some(Transfer {
             from: format_hex(&transfer.from),
             to: format_hex(&transfer.to),
             token_id: transfer.token_id.to_string(),
             tx_hash: hash,
+            })
+           } else {
+              None
+           }
         })
         .collect::<Vec<Transfer>>();
 

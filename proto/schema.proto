@@ -22,6 +22,12 @@ message Transfer {
   string tx_hash = 4;
 }
 
+message Mint {
+  string from = 1;
+  string to = 2;
+  string token_id = 3;
+}
+
 message Approval {
   string owner = 1;
   string approved = 2;
