@@ -10,7 +10,7 @@ dataSources:
     source:
       package:
         moduleName: graph_out
-        file: substream.spkg
+        file: narcos.spkg
     mapping:
       kind: substreams/graph-entities
       apiVersion: 0.0.5

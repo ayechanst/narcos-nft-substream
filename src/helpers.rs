@@ -29,11 +29,20 @@ pub fn transfers_to_table_changes(tables: &mut Tables, transfers: &Transfers) {
 pub fn mints_to_table_changes(tables: &mut Tables, mints: &Mints) {
     for mint in mints.mints.iter() {
         //handle the mint
-        let key = format!("{}-{}", &mint.tx_hash, mint.token_id);
+        let key = format!("{}-{}", &mint.token_id, mint.token_id);
         let row = tables.update_row("Mint", key);
         row.set("from", &mint.from);
         row.set("to", &mint.to);
         row.set("tokenId", &mint.token_id);
+        // handle the accounts
+        tables.create_row("Account", &mint.from);
+        tables.create_row("Account", &mint.to);
+
+        // handle updating the token owner
+        tables
+            .update_row("Token", format!("{}", &mint.token_id))
+            .set("collection", ADDRESS.to_string())
+            .set("owner", &mint.to);
     }
 }
 

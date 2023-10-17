@@ -14,7 +14,7 @@ use helpers::*;
 use erc721::events::{Approval as ApprovalEvent, Transfer as TransferEvent};
 
 pub const ADDRESS: &str = "0xF419CdbaCdE81a94378c8168059a7526d7779F98";
-const START_BLOCK: u64 = 18321726;
+const START_BLOCK: u64 = 16321726;
 
 #[substreams::handlers::map]
 fn map_transfers(block: eth::v2::Block) -> Result<Transfers, substreams::errors::Error> {
@@ -65,7 +65,7 @@ fn map_mints(block: eth::v2::Block) -> Result<Mints, substreams::errors::Error> 
                 None
             }
         })
-        .filter_map(|(transfer, _hash)| {
+        .filter_map(|(transfer, hash)| {
             if format_hex(&transfer.from) == "0x0000000000000000000000000000000000000000".to_string() {
                 Some(Mint {
                     from: format_hex(&transfer.from),
@@ -120,9 +120,9 @@ pub fn graph_out(
         // Create the collection, we only need to do this once
         tables.create_row("Collection", ADDRESS.to_string());
     }
-    transfers_to_table_changes(&mut tables, &transfers);
-    approvals_to_table_changes(&mut tables, &approvals);
+        // transfers_to_table_changes(&mut tables, &transfers);
+        // approvals_to_table_changes(&mut tables, &approvals);
+        mints_to_table_changes(&mut tables, &mints);
 
-
-    Ok(tables.to_entity_changes())
+        Ok(tables.to_entity_changes())
 }
